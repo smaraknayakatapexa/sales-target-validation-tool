@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Target Validator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <p class="eyebrow">Proof of Concept</p>
+        <h1>Sales Target Validation Tool</h1>
+        <p class="subhead">
+          Enter a product sales target to check if it is aligned with realistic growth
+          expectations and get an ideal recommendation.
+        </p>
+      </header>
+
+      <section class="panel">
+        <form id="target-form">
+          <div class="field">
+            <label for="product-name">Product name</label>
+            <input id="product-name" name="product-name" type="text" placeholder="e.g., Aurora Speaker" />
+          </div>
+
+          <div class="field">
+            <label for="current-sales">Current monthly sales (USD)</label>
+            <input
+              id="current-sales"
+              name="current-sales"
+              type="number"
+              min="0"
+              step="100"
+              placeholder="e.g., 24000"
+            />
+            <span class="helper">Used to calculate an ideal target (default: $20,000).</span>
+          </div>
+
+          <div class="field">
+            <label for="target-sales">Proposed target sales (USD)</label>
+            <input
+              id="target-sales"
+              name="target-sales"
+              type="number"
+              min="0"
+              step="100"
+              placeholder="e.g., 28000"
+              required
+            />
+          </div>
+
+          <button type="submit">Validate target</button>
+        </form>
+      </section>
+
+      <section class="panel result" aria-live="polite">
+        <h2>Recommendation</h2>
+        <div id="result-card" class="result-card">
+          <p class="muted">Submit a target to see the recommendation.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
