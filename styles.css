@@ -1,0 +1,159 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: #f6f7fb;
+  color: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 16px;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+header {
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6366f1;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.subhead {
+  margin: 0;
+  color: #4b5563;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid rgba(99, 102, 241, 0.4);
+  border-color: #6366f1;
+}
+
+button {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px rgba(79, 70, 229, 0.25);
+}
+
+.helper {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.result {
+  border-left: 6px solid #4f46e5;
+}
+
+.result-card {
+  display: grid;
+  gap: 12px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.good {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+}
+
+.badge.warn {
+  background: rgba(249, 115, 22, 0.12);
+  color: #c2410c;
+}
+
+.badge.bad {
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+}
+
+.metrics {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f9fafb;
+}
+
+.metrics strong {
+  font-weight: 600;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+@media (min-width: 768px) {
+  .app {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    grid-column: 1 / -1;
+  }
+}
